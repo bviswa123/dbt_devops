@@ -33,4 +33,4 @@ steps:
     cd snowflake_tpc_demo
     dbt test
     dbt run
-  displayName: 'Dbt project is being Tested, and Run'a
+  displayName: 'Dbt project is being Tested, and Run'
