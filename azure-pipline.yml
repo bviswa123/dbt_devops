@@ -14,7 +14,7 @@ steps:
   name: SettingProfile
   displayName: 'Downloading Profile for Snowflake'
   inputs:
-    secureFile: 'mysnowflake-db-wc70929'
+    secureFile: 'mysnowflake-db-wc70929.yml'
 
 - script: |
     echo Installing $(SettingProfile.secureFilePath) to the ~/.dbt...
