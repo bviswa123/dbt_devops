@@ -30,7 +30,6 @@ steps:
   displayName: 'Dbt project is Compiling'
 
 - script: |
- 
     dbt test
     dbt run
   displayName: 'Dbt project is being Tested, and Run'
