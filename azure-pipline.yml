@@ -14,7 +14,7 @@ steps:
   name: SettingProfile
   displayName: 'Downloading Profile for Snowflake'
   inputs:
-    secureFile: 'mysnowflake-db-wc70929.yml'
+    secureFile: 'mysnowflake-db-wc70929'
 
 - script: |
     echo Installing $(SettingProfile.secureFilePath) to the ~/.dbt...
@@ -27,6 +27,10 @@ steps:
     export PATH=$PATH:/home/vsts_azpcontainer/.local/bin
     cd snowflake_tpc_demo
     dbt compile
+  displayName: 'Dbt project is Compiling'
+
+- script: |
+    cd snowflake_tpc_demo
     dbt test
     dbt run
-  displayName: 'Compile, Test, and Run'
+  displayName: 'Dbt project is being Tested, and Run'a
