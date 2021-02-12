@@ -29,7 +29,7 @@ steps:
     dbt compile
   displayName: 'Dbt project is Compiling'
 
-  - script: |
+- script: |
     cd snowflake_tpc_demo
     dbt test
     dbt run
