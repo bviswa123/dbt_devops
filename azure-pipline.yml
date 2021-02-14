@@ -31,7 +31,7 @@ steps:
 
 - script: |
    # pip install dbt --user
-   # export PATH=$PATH:/home/vsts_azpcontainer/.local/bin
+    export PATH=$PATH:/home/vsts_azpcontainer/.local/bin
     dbt test
     dbt run
   displayName: 'Dbt project is being Tested, and Run'
