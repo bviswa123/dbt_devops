@@ -22,14 +22,16 @@ steps:
     cp $(SettingProfile.secureFilePath) ~/.dbt/profiles.yml
   displayName: Installing Profile for Snowflake
     
-- script: 
+- script: |
     pip install dbt --user
     export PATH=$PATH:/home/vsts_azpcontainer/.local/bin
     cd snowflake_tpc_demo
     dbt compile
   displayName: 'Dbt project is Compiling'
 
-- script: |
+- script: 
+    pip install dbt --user
+    export PATH=$PATH:/home/vsts_azpcontainer/.local/bin
     dbt test
     dbt run
   displayName: 'Dbt project is being Tested, and Run'
