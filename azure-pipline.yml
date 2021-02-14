@@ -29,7 +29,7 @@ steps:
     dbt compile
   displayName: 'Dbt project is Compiling'
 
-- script: 
+- script: |
     pip install dbt --user
     export PATH=$PATH:/home/vsts_azpcontainer/.local/bin
     dbt test
